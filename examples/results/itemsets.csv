@@ -1,0 +1,279 @@
+support,itemsets_str,length
+0.4198198198198198,corporate social responsibility,1
+0.14414414414414414,csr,1
+0.06666666666666667,corporate social responsibility (csr),1
+0.05945945945945946,customer loyalty,1
+0.05765765765765766,sustainability,1
+0.04684684684684685,brand image,1
+0.04684684684684685,customer satisfaction,1
+0.03963963963963964,purchase intention,1
+0.036036036036036036,corporate social responsibility + csr,2
+0.032432432432432434,corporate social responsibility + customer loyalty,2
+0.032432432432432434,trust,1
+0.03063063063063063,corporate image,1
+0.02882882882882883,brand loyalty,1
+0.02882882882882883,sustainable development,1
+0.02702702702702703,corporate social responsibility + sustainability,2
+0.02702702702702703,loyalty,1
+0.025225225225225224,brand equity,1
+0.025225225225225224,corporate social responsibility + customer satisfaction,2
+0.023423423423423424,corporate reputation,1
+0.023423423423423424,social media,1
+0.021621621621621623,customer trust,1
+0.021621621621621623,reputation,1
+0.01981981981981982,brand image + corporate social responsibility,2
+0.01981981981981982,organizational identification,1
+0.01981981981981982,willingness to pay,1
+0.018018018018018018,banks,1
+0.018018018018018018,competitive advantage,1
+0.018018018018018018,covid-19,1
+0.016216216216216217,brand identification,1
+0.016216216216216217,china,1
+0.016216216216216217,consumer behavior,1
+0.016216216216216217,corporate image + corporate social responsibility,2
+0.016216216216216217,corporate reputation + corporate social responsibility,2
+0.016216216216216217,corporate social responsibility + customer trust,2
+0.016216216216216217,corporate social responsibility + loyalty,2
+0.016216216216216217,customer loyalty + customer satisfaction,2
+0.016216216216216217,firm performance,1
+0.016216216216216217,service quality,1
+0.014414414414414415,affective commitment,1
+0.014414414414414415,banks + corporate social responsibility,2
+0.014414414414414415,brand awareness,1
+0.014414414414414415,brand trust,1
+0.014414414414414415,corporate social responsibility + identification,2
+0.014414414414414415,corporate social responsibility + purchase intention,2
+0.014414414414414415,corporate social responsibility + sustainable development,2
+0.014414414414414415,identification,1
+0.014414414414414415,pakistan,1
+0.014414414414414415,purchase intentions,1
+0.014414414414414415,satisfaction,1
+0.014414414414414415,sem,1
+0.012612612612612612,brand equity + corporate social responsibility,2
+0.012612612612612612,brand image + brand loyalty,2
+0.012612612612612612,brand image + purchase intention,2
+0.012612612612612612,corporate image + customer loyalty,2
+0.012612612612612612,corporate social responsibility + customer loyalty + customer satisfaction,3
+0.012612612612612612,corporate social responsibility + trust,2
+0.012612612612612612,developing country,1
+0.012612612612612612,environment,1
+0.012612612612612612,financial performance,1
+0.012612612612612612,india,1
+0.012612612612612612,meta-analysis,1
+0.012612612612612612,word of mouth,1
+0.010810810810810811,banking industry,1
+0.010810810810810811,brand image + csr,2
+0.010810810810810811,brand loyalty + corporate social responsibility,2
+0.010810810810810811,corporate social responsibility + covid-19,2
+0.010810810810810811,corporate social responsibility + developing country,2
+0.010810810810810811,corporate social responsibility + meta-analysis,2
+0.010810810810810811,corporate social responsibility + organizational identification,2
+0.010810810810810811,corporate social responsibility + pakistan,2
+0.010810810810810811,corporate social responsibility + reputation,2
+0.010810810810810811,corporate social responsibility + social media,2
+0.010810810810810811,corporate social responsibility + willingness to pay,2
+0.010810810810810811,corporate sustainability,1
+0.010810810810810811,hospitality,1
+0.010810810810810811,job satisfaction,1
+0.010810810810810811,organizational commitment,1
+0.010810810810810811,social responsibility,1
+0.010810810810810811,stakeholder engagement,1
+0.010810810810810811,sustainable consumption,1
+0.010810810810810811,systematic review,1
+0.009009009009009009,altruism,1
+0.009009009009009009,banking industry + corporate social responsibility,2
+0.009009009009009009,banking sector,1
+0.009009009009009009,china + corporate social responsibility,2
+0.009009009009009009,co-creation,1
+0.009009009009009009,consumer behavior + corporate social responsibility,2
+0.009009009009009009,corporate ability,1
+0.009009009009009009,corporate reputation + corporate social responsibility + customer loyalty,3
+0.009009009009009009,corporate reputation + customer loyalty,2
+0.009009009009009009,corporate social responsibility + customer loyalty + customer trust,3
+0.009009009009009009,corporate social responsibility + customer satisfaction + customer trust,3
+0.009009009009009009,corporate social responsibility + firm performance,2
+0.009009009009009009,corporate social responsibility + hospitality,2
+0.009009009009009009,corporate social responsibility + satisfaction,2
+0.009009009009009009,corporate social responsibility + word of mouth,2
+0.009009009009009009,csr authenticity,1
+0.009009009009009009,customer loyalty + customer trust,2
+0.009009009009009009,customer satisfaction + customer trust,2
+0.009009009009009009,customers,1
+0.009009009009009009,employee engagement,1
+0.009009009009009009,employees,1
+0.009009009009009009,ethical leadership,1
+0.009009009009009009,gender,1
+0.009009009009009009,organizational trust,1
+0.009009009009009009,perceived csr,1
+0.009009009009009009,pls-sem,1
+0.009009009009009009,social exchange theory,1
+0.009009009009009009,social identity theory,1
+0.009009009009009009,structural equation modeling,1
+0.009009009009009009,structural equation modelling,1
+0.009009009009009009,subjective norms,1
+0.009009009009009009,theory of planned behavior,1
+0.009009009009009009,vietnam,1
+0.007207207207207207,attitude,1
+0.007207207207207207,awareness,1
+0.007207207207207207,banking,1
+0.007207207207207207,banking sector + corporate social responsibility,2
+0.007207207207207207,bibliometric analysis,1
+0.007207207207207207,brand awareness + brand equity,2
+0.007207207207207207,brand awareness + brand image,2
+0.007207207207207207,brand awareness + brand loyalty,2
+0.007207207207207207,brand awareness + corporate social responsibility,2
+0.007207207207207207,brand credibility,1
+0.007207207207207207,brand equity + brand image,2
+0.007207207207207207,brand equity + brand loyalty,2
+0.007207207207207207,brand experience,1
+0.007207207207207207,competitive advantage + corporate social responsibility,2
+0.007207207207207207,consumer,1
+0.007207207207207207,consumer behaviour,1
+0.007207207207207207,consumer trust,1
+0.007207207207207207,content analysis,1
+0.007207207207207207,corporate branding,1
+0.007207207207207207,corporate social responsibility (csr) + sustainability,2
+0.007207207207207207,corporate social responsibility + customer loyalty + customer satisfaction + customer trust,4
+0.007207207207207207,corporate social responsibility + customers,2
+0.007207207207207207,corporate social responsibility + employees,2
+0.007207207207207207,corporate social responsibility + environment,2
+0.007207207207207207,corporate social responsibility + india,2
+0.007207207207207207,corporate social responsibility + service quality,2
+0.007207207207207207,corporate social responsibility + structural equation modelling,2
+0.007207207207207207,corporate social responsibility + systematic literature review,2
+0.007207207207207207,crisis,1
+0.007207207207207207,csr + customer satisfaction,2
+0.007207207207207207,csr + trust,2
+0.007207207207207207,customer citizenship behavior,1
+0.007207207207207207,customer loyalty + customer satisfaction + customer trust,3
+0.007207207207207207,customer loyalty + service quality,2
+0.007207207207207207,customer satisfaction + reputation,2
+0.007207207207207207,emerging markets,1
+0.007207207207207207,emotions,1
+0.007207207207207207,employee commitment,1
+0.007207207207207207,environmental responsibility,1
+0.007207207207207207,ethics,1
+0.007207207207207207,green brand loyalty,1
+0.007207207207207207,green marketing,1
+0.007207207207207207,legitimacy,1
+0.007207207207207207,mediation,1
+0.007207207207207207,organizational performance,1
+0.007207207207207207,pro-environmental behavior,1
+0.007207207207207207,quality of life,1
+0.007207207207207207,retail,1
+0.007207207207207207,revisit intention,1
+0.007207207207207207,smes,1
+0.007207207207207207,spain,1
+0.007207207207207207,sustainable performance,1
+0.007207207207207207,systematic literature review,1
+0.005405405405405406,affective commitment + corporate social responsibility,2
+0.005405405405405406,altruism + corporate social responsibility,2
+0.005405405405405406,attitudinal loyalty,1
+0.005405405405405406,attitudinal loyalty + corporate social responsibility,2
+0.005405405405405406,banks + csr,2
+0.005405405405405406,bibliometrics,1
+0.005405405405405406,brand awareness + brand equity + brand loyalty,3
+0.005405405405405406,brand equity + csr,2
+0.005405405405405406,brand identification + corporate social responsibility,2
+0.005405405405405406,brand image + brand trust,2
+0.005405405405405406,brand image + customer loyalty,2
+0.005405405405405406,brand image + customer satisfaction,2
+0.005405405405405406,brand image + reputation,2
+0.005405405405405406,brand loyalty + csr,2
+0.005405405405405406,brand loyalty + purchase intention,2
+0.005405405405405406,brand trust + corporate social responsibility,2
+0.005405405405405406,co-creation + corporate social responsibility,2
+0.005405405405405406,co-creation + sustainability,2
+0.005405405405405406,consumer + corporate social responsibility,2
+0.005405405405405406,consumer ethnocentrism,1
+0.005405405405405406,consumer satisfaction,1
+0.005405405405405406,corporate ability + corporate social responsibility,2
+0.005405405405405406,corporate branding + corporate social responsibility,2
+0.005405405405405406,corporate image + customer loyalty + service quality,3
+0.005405405405405406,corporate image + customer satisfaction,2
+0.005405405405405406,corporate image + service quality,2
+0.005405405405405406,corporate philanthropy,1
+0.005405405405405406,corporate reputation + corporate social responsibility + customer trust,3
+0.005405405405405406,corporate reputation + customer trust,2
+0.005405405405405406,corporate responsibility,1
+0.005405405405405406,corporate social irresponsibility,1
+0.005405405405405406,corporate social irresponsibility + corporate social responsibility,2
+0.005405405405405406,corporate social responsibility (csr) + customer satisfaction,2
+0.005405405405405406,corporate social responsibility + crisis,2
+0.005405405405405406,corporate social responsibility + csr authenticity,2
+0.005405405405405406,corporate social responsibility + customer citizenship behavior,2
+0.005405405405405406,corporate social responsibility + customer loyalty + pakistan,3
+0.005405405405405406,corporate social responsibility + customer satisfaction + reputation,3
+0.005405405405405406,corporate social responsibility + emerging markets,2
+0.005405405405405406,corporate social responsibility + employee commitment,2
+0.005405405405405406,corporate social responsibility + financial performance,2
+0.005405405405405406,corporate social responsibility + hotel,2
+0.005405405405405406,corporate social responsibility + job satisfaction,2
+0.005405405405405406,corporate social responsibility + loyalty + satisfaction,3
+0.005405405405405406,corporate social responsibility + organizational commitment,2
+0.005405405405405406,corporate social responsibility + organizational trust,2
+0.005405405405405406,corporate social responsibility + philanthropy,2
+0.005405405405405406,corporate social responsibility + purchase intentions,2
+0.005405405405405406,corporate social responsibility + stakeholder engagement,2
+0.005405405405405406,corporate social responsibility + sustainable consumption,2
+0.005405405405405406,corporate social responsibility + systematic review,2
+0.005405405405405406,corporate social responsibility + vietnam,2
+0.005405405405405406,csr + financial performance,2
+0.005405405405405406,csr + purchase intention,2
+0.005405405405405406,csr + purchase intentions,2
+0.005405405405405406,csr + sem,2
+0.005405405405405406,csr + social media,2
+0.005405405405405406,csr + sustainability,2
+0.005405405405405406,csr communication,1
+0.005405405405405406,csr support,1
+0.005405405405405406,customer engagement,1
+0.005405405405405406,customer loyalty + developing country,2
+0.005405405405405406,customer loyalty + pakistan,2
+0.005405405405405406,customer loyalty + sustainability,2
+0.005405405405405406,customer perceived ethicality,1
+0.005405405405405406,customer-company identification,1
+0.005405405405405406,e-trust,1
+0.005405405405405406,electronic word of mouth,1
+0.005405405405405406,environmental concern,1
+0.005405405405405406,environmental corporate social responsibility,1
+0.005405405405405406,environmental management,1
+0.005405405405405406,environmental sustainability,1
+0.005405405405405406,esg,1
+0.005405405405405406,ewom,1
+0.005405405405405406,fit,1
+0.005405405405405406,generation z,1
+0.005405405405405406,green trust,1
+0.005405405405405406,hotel,1
+0.005405405405405406,hotel industry,1
+0.005405405405405406,image,1
+0.005405405405405406,internationalization,1
+0.005405405405405406,iran,1
+0.005405405405405406,latent class model,1
+0.005405405405405406,life insurance,1
+0.005405405405405406,loyalty + reputation,2
+0.005405405405405406,loyalty + satisfaction,2
+0.005405405405405406,micro-csr,1
+0.005405405405405406,organisational commitment,1
+0.005405405405405406,organizational identification + organizational trust,2
+0.005405405405405406,organizational pride,1
+0.005405405405405406,perceived behavioral control,1
+0.005405405405405406,perceived corporate social responsibility,1
+0.005405405405405406,perceived external prestige,1
+0.005405405405405406,perceived quality,1
+0.005405405405405406,personal values,1
+0.005405405405405406,philanthropy,1
+0.005405405405405406,purchase intention + trust,2
+0.005405405405405406,purchase intention + willingness to pay,2
+0.005405405405405406,resilience,1
+0.005405405405405406,review,1
+0.005405405405405406,saudi arabia,1
+0.005405405405405406,social media + twitter,2
+0.005405405405405406,stakeholder engagement + sustainable development,2
+0.005405405405405406,stakeholders,1
+0.005405405405405406,strategic management,1
+0.005405405405405406,sustainable consumption + sustainable development,2
+0.005405405405405406,sustainable development goals,1
+0.005405405405405406,tourism,1
+0.005405405405405406,twitter,1
+0.005405405405405406,values,1
+0.005405405405405406,voluntary pro-environmental behavior,1

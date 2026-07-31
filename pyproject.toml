@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "basketslr"
+version = "1.0.0"
+description = "Association rule mining of author keywords for thematic mapping in systematic literature reviews"
+authors = [{name="BasketSLR Dev Team", email="sebastian.matysik@usz.edu.pl"}]
+license = {text="MIT"}
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "pandas>=2.0",
+  "numpy>=1.22",
+  "mlxtend>=0.23",
+  "matplotlib>=3.7",
+  "networkx>=3.0",
+  "openpyxl>=3.1"
+]
+
+[project.optional-dependencies]
+colab = ["ipython>=7.0"]
+
+[project.scripts]
+basketslr = "basketslr.cli:main"
+basketslr-wizard = "basketslr.wizard:main"
+
+[project.urls]
+Homepage = "https://github.com/s-matysik/BasketSLR"
+Repository = "https://github.com/s-matysik/BasketSLR"
+Documentation = "https://s-matysik.github.io/BasketSLR/"
+"Bug Tracker" = "https://github.com/s-matysik/BasketSLR/issues"
+
+[tool.setuptools]
+packages = ["basketslr"]

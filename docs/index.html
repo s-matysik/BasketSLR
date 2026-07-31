@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BasketSLR – Comprehensive Documentation</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;max-width:950px;margin:auto;padding:2.2rem;line-height:1.55}
+h1,h2,h3{border-bottom:1px solid #e0e0e0;padding-bottom:.2rem;margin-top:2.2rem}
+code,pre{font-family:Consolas,Monaco,monospace}
+pre{background:#fafafa;border:1px solid #ddd;padding:1rem;border-radius:5px;overflow-x:auto}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid #ddd;padding:.4rem}th{background:#f5f5f5}
+small.note{color:#666}
+</style>
+</head>
+<body>
+
+<h1>BasketSLR 🧺 <small>Association rules of author keywords for SLR thematic mapping</small></h1>
+
+<p><strong>BasketSLR</strong> is a compact Python framework that formalises <em>association rule mining</em> (ARM, Apriori) of author keywords as a reproducible, complementary method for thematic mapping in systematic literature reviews (SLR). Each publication is a transaction; its author keywords form the basket. ARM adds three capabilities absent from symmetric co-occurrence tools such as VOSviewer or Bibliometrix:</p>
+
+<ul>
+  <li><strong>Directional</strong> conditional probabilities (confidence: A → B ≠ B → A)</li>
+  <li><strong>Multi-item</strong> thematic clusters (frequent itemsets of size k ≥ 3)</li>
+  <li><strong>Quantified</strong> interestingness thresholds (support, confidence, lift)</li>
+</ul>
+
+<p><small class="note">Note: VOSviewer's association-strength normalisation is mathematically equivalent to ARM's lift – BasketSLR exposes the two missing dimensions.</small></p>
+
+<h2>1&nbsp;&nbsp;Installation</h2>
+
+<h3>1.1 From GitHub (development version)</h3>
+<pre><code>pip install git+https://github.com/s-matysik/BasketSLR.git</code></pre>
+
+<p>Alternatively, clone the repository and work in editable mode:</p>
+<pre><code>git clone https://github.com/s-matysik/BasketSLR.git
+cd BasketSLR
+pip install -e .       # editable install
+</code></pre>
+
+<h3>1.2 Google Colab</h3>
+<pre><code>!pip install git+https://github.com/s-matysik/BasketSLR.git
+from basketslr.colab_app import run
+run()
+</code></pre>
+
+<h2>2&nbsp;&nbsp;Workflow</h2>
+
+<pre><code>Scopus CSV ─► io.extract_transactions() ─► frequency stats + co-occurrence
+                        │
+                        ▼
+        mining.frequent_itemsets()  (Apriori, σ = min_support)
+                        │
+                        ▼
+        mining.association_rules()  (γ = min_confidence; support/confidence/lift)
+                        │
+                        ▼
+   report (arm_report.txt) + Excel + 4 figures ─► ZIP package
+</code></pre>
+
+<h2>3&nbsp;&nbsp;Entry points</h2>
+
+<table>
+<tr><th>Interface</th><th>Command</th><th>Target user</th></tr>
+<tr><td>CLI (flags)</td><td><code>basketslr -i scopus.csv -s 0.005 -g 0.3 -o results/</code></td><td>programmers, scripting</td></tr>
+<tr><td>Wizard</td><td><code>basketslr-wizard</code></td><td>local, zero-config</td></tr>
+<tr><td>Colab GUI</td><td><code>from basketslr.colab_app import run; run()</code></td><td>non-programmers</td></tr>
+<tr><td>Python API</td><td><code>import basketslr as b</code></td><td>notebooks, pipelines</td></tr>
+</table>
+
+<h2>4&nbsp;&nbsp;Parameters</h2>
+
+<table>
+<tr><th>Parameter</th><th>Symbol</th><th>Default</th><th>Notes</th></tr>
+<tr><td><code>min_support</code></td><td>σ</td><td>0.005</td><td>corpus-dependent; <code>"auto"</code> runs iterative halving (start 0.05, halve until ≥ 10 keyword pairs pass)</td></tr>
+<tr><td><code>min_confidence</code></td><td>γ</td><td>0.3</td><td>widely used ARM default</td></tr>
+<tr><td><code>max_len</code></td><td>k</td><td>4</td><td>maximum itemset size; <code>None</code>/0 = unlimited</td></tr>
+</table>
+
+<p>Rules of thumb for σ: small corpora (N &lt; 100): 0.05–0.10; medium (100–1,000): 0.005–0.02; large (&gt; 1,000): 0.001–0.005.</p>
+
+<h2>5&nbsp;&nbsp;Python API example</h2>
+
+<pre><code>import basketslr as b
+
+df  = b.read_csv("scopus.csv")
+tr  = b.extract_transactions(df)          # publications -&gt; keyword baskets
+print(b.corpus_stats(tr))
+
+sigma = b.auto_min_support(tr)            # optional calibration
+freq, rules = b.mine(tr, min_support=sigma, min_confidence=0.3)
+
+b.plot_rules_network(rules, top_n=40, path="network.png")
+b.full_report(tr, freq, rules, sigma, 0.3, path="arm_report.txt")
+</code></pre>
+
+<h2>6&nbsp;&nbsp;Modules</h2>
+
+<table>
+<tr><th>Module</th><th>Purpose</th><th>Determinism note</th></tr>
+<tr><td>io.py</td><td>load CSV, extract keyword transactions</td><td>pure pandas</td></tr>
+<tr><td>frequency.py</td><td>frequency table, co-occurrence matrix</td><td>counting only</td></tr>
+<tr><td>mining.py</td><td>Apriori itemsets, rules, auto σ calibration</td><td>fixed multi-key sorting</td></tr>
+<tr><td>plots.py</td><td>4 figures</td><td>spring layout seed = 42</td></tr>
+<tr><td>report.py</td><td>arm_report.txt, Excel export</td><td>deterministic</td></tr>
+<tr><td>pipeline.py</td><td>end-to-end workflow + ZIP</td><td>shared by all UIs</td></tr>
+<tr><td>cli.py / wizard.py / colab_app.py</td><td>entry points</td><td>mirror the pipeline</td></tr>
+</table>
+
+<h2>7&nbsp;&nbsp;Reproducible example</h2>
+
+<p>The repository ships the CSR corpus (<code>examples/</code>, 597 Scopus records). With σ = 0.005 and γ = 0.3 BasketSLR yields <strong>278 frequent itemsets</strong> (151 singletons, 115 pairs, 11 triples, 1 quadruple) and <strong>138 association rules</strong>, e.g. {brand equity, brand loyalty} → {brand awareness} with lift = 52.03 – identical on every run.</p>
+
+<h2>8&nbsp;&nbsp;Related software</h2>
+
+<p><a href="https://github.com/s-matysik/EmbedSLR">EmbedSLR</a> – deterministic embedding-based screening for SLR. ARM-derived themes can inform the natural-language queries used by EmbedSLR (iterative ARM → screening → ARM refinement cycle).</p>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+==== ASSOCIATION RULE REPORT ====
+Articles with author keywords     : 555
+Unique keywords                   : 1741
+Avg keywords / article            : 5.46
+min_support (sigma)               : 0.005
+min_confidence (gamma)            : 0.3
+Frequent itemsets                 : 278
+  singletons / pairs / triples /4+: 151 / 115 / 11 / 1
+Association rules                 : 138
+Max lift                          : 52.03
+Max confidence                    : 1.000
+
+---- Top 10 rules by lift ----
+brand awareness -> brand equity + brand loyalty  (supp=0.005, conf=0.375, lift=52.03)
+brand equity + brand loyalty -> brand awareness  (supp=0.005, conf=0.750, lift=52.03)
+twitter -> social media  (supp=0.005, conf=1.000, lift=42.69)
+customer loyalty + customer trust -> corporate social responsibility + customer satisfaction  (supp=0.007, conf=0.800, lift=31.71)
+organizational trust -> organizational identification  (supp=0.005, conf=0.600, lift=30.27)
+brand awareness + brand loyalty -> brand equity  (supp=0.005, conf=0.750, lift=29.73)
+corporate social responsibility + customer trust -> customer loyalty + customer satisfaction  (supp=0.007, conf=0.444, lift=27.41)
+customer loyalty + customer satisfaction -> corporate social responsibility + customer trust  (supp=0.007, conf=0.444, lift=27.41)
+corporate social responsibility + customer loyalty + customer satisfaction -> customer trust  (supp=0.007, conf=0.571, lift=26.43)
+corporate image + customer loyalty -> service quality  (supp=0.005, conf=0.429, lift=26.43)
