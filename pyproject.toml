@@ -21,6 +21,7 @@ dependencies = [
 
 [project.optional-dependencies]
 colab = ["ipython>=7.0"]
+test = ["pytest>=7.0"]
 
 [project.scripts]
 basketslr = "basketslr.cli:main"
@@ -34,3 +35,15 @@ Documentation = "https://s-matysik.github.io/BasketSLR/"
 
 [tool.setuptools]
 packages = ["basketslr"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q --strict-markers"
+markers = [
+  "slow: full-pipeline tests that write files to disk",
+]
+filterwarnings = [
+  "ignore::RuntimeWarning:mlxtend.frequent_patterns.association_rules",
+]
