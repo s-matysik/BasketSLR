@@ -1,4 +1,6 @@
 include LICENSE
 include README.md
-recursive-include examples *.csv *.md
+include pyproject.toml
+recursive-include examples *.csv *.md *.txt *.png
 recursive-include docs *
+recursive-include tests *.py

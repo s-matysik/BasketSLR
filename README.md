@@ -62,6 +62,27 @@ b.run_analysis(df, out="results/")                 # full pipeline + ZIP
 | `keyword_basket_analysis.xlsx` | 4-sheet Excel workbook |
 | `fig1–fig4 .png` | frequency chart, co-occurrence heatmap, support–confidence scatter, rule network |
 
+## ✅ Tests
+
+The suite pins every figure reported in the accompanying paper, so a dependency
+upgrade that changes any result makes the tests fail.
+
+```bash
+pip install -e ".[test]"
+pytest                    # full suite (74 tests)
+pytest -m "not slow"      # skip the tests that write files to disk
+```
+
+Coverage: keyword-column autodetection across Scopus and Web of Science
+exports, keyword normalisation and degenerate inputs (empty corpora,
+duplicate/NaN/non-ASCII keywords), parameter validation, the
+iterative-halving support calibration, the metric identities the paper relies
+on (lift = N x association strength; directional confidence), byte-identical
+reproduction of the shipped example results, the seeded network layout, and
+the command-line interface. Verified locally on Python 3.9 (pandas 2.3,
+mlxtend 0.23) and Python 3.11 (pandas 3.0, mlxtend 0.25); the GitHub Actions
+workflow additionally covers Python 3.10, 3.12 and 3.13 plus macOS and Windows.
+
 ## 📝 Citing
 
 If you use **BasketSLR** in scientific work, please cite the accompanying method paper:
