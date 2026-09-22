@@ -62,6 +62,25 @@ b.run_analysis(df, out="results/")                 # full pipeline + ZIP
 | `keyword_basket_analysis.xlsx` | 4-sheet Excel workbook |
 | `fig1–fig4 .png` | frequency chart, co-occurrence heatmap, support–confidence scatter, rule network |
 
+## 🔬 Validation corpora and paper tables
+
+Five additional Scopus corpora spanning management, economics and computer
+science (34–5,457 records) are distributed in `additional-validation/`, each
+with its source keywords and the complete analytical outputs; `summary.csv`
+aggregates them. These are the corpora behind Table 4 of the SoftwareX article.
+
+The parameter sweeps reported in the article and its supplementary material can
+be regenerated from a clean checkout, with no network access:
+
+```bash
+python examples/reproduce_paper_tables.py
+```
+
+| File | Content |
+|---|---|
+| `examples/sigma_sweep.csv` | six corpora x ten values of the minimum-support threshold (supplementary Fig. S1, Table S6) |
+| `examples/calibration_params.csv` | sensitivity of `auto_min_support()` to its own constants (article Table 5) |
+
 ## ✅ Tests
 
 The suite pins every figure reported in the accompanying paper, so a dependency

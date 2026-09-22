@@ -1,0 +1,6 @@
+case,query,N,Nkw,uniq,avg,rules_0005,star_0005,sigma_auto,items_auto,rules_auto,maxlift_auto,star_auto,top_kw
+case-1-quiet-quitting,"""quiet quitting"" AND ""employee engagement""",34,31,127,5.74,13097,5,0.05,27,18,4.43,50,quiet quitting
+case-2-cbdc-monetary-policy,"""central bank digital currency"" AND ""monetary policy""",277,224,641,6.04,1747,12,0.025,60,36,3.67,53,monetary policy
+case-3-dynamic-capabilities,"""dynamic capabilities"" AND ""digital transformation""",1333,1255,3109,5.65,136,60,0.0125,65,30,1.65,63,digital transformation
+case-4-circular-economy,"""circular economy"" AND ""business model""",3765,3297,6810,5.61,86,90,0.0125,60,23,1.89,96,circular economy
+case-5-federated-learning,"""federated learning"" AND ""privacy"" AND ""AI""",5457,4678,9809,6.23,111,79,0.025,37,14,2.35,93,federated learning

@@ -1,0 +1,23 @@
+==== ASSOCIATION RULE REPORT ====
+Articles with author keywords     : 4678
+Unique keywords                   : 9809
+Avg keywords / article            : 6.23
+min_support (sigma)               : 0.025
+min_confidence (gamma)            : 0.3
+Frequent itemsets                 : 37
+  singletons / pairs / triples /4+: 22 / 15 / 0 / 0
+Association rules                 : 14
+Max lift                          : 2.35
+Max confidence                    : 0.872
+
+---- Top 10 rules by lift ----
+machine learning -> artificial intelligence  (supp=0.041, conf=0.332, lift=2.35)
+differential privacy -> federated learning  (supp=0.056, conf=0.872, lift=1.43)
+privacy-preserving ai -> federated learning  (supp=0.048, conf=0.856, lift=1.40)
+privacy preservation -> federated learning  (supp=0.037, conf=0.847, lift=1.38)
+blockchain -> federated learning  (supp=0.063, conf=0.768, lift=1.26)
+explainable ai -> federated learning  (supp=0.059, conf=0.762, lift=1.24)
+edge ai -> federated learning  (supp=0.026, conf=0.731, lift=1.19)
+data privacy -> federated learning  (supp=0.038, conf=0.718, lift=1.17)
+edge computing -> federated learning  (supp=0.055, conf=0.701, lift=1.15)
+security -> federated learning  (supp=0.025, conf=0.659, lift=1.08)

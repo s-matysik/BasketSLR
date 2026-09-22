@@ -1,0 +1,61 @@
+support,itemsets_str,length
+0.7355171367910222,circular economy,1
+0.19472247497725204,sustainability,1
+0.14680012132241432,circular economy + sustainability,2
+0.08492569002123142,circular business models,1
+0.0791628753412193,business model,1
+0.07309675462541705,circular business model,1
+0.06794055201698514,business models,1
+0.06399757355171368,business model + circular economy,2
+0.06308765544434335,circular business models + circular economy,2
+0.05489839247801031,business models + circular economy,2
+0.0545950864422202,sustainable development,1
+0.052168638155899304,circular business model + circular economy,2
+0.04549590536851683,business model innovation,1
+0.043069457082195936,circular economy + sustainable development,2
+0.038823172581134366,industry 4.0,1
+0.03670003033060358,business model innovation + circular economy,2
+0.03427358204428268,recycling,1
+0.029420685471640885,innovation,1
+0.028207461328480437,circular economy + industry 4.0,2
+0.027600849256900213,waste management,1
+0.026387625113739762,sustainable business models,1
+0.026084319077949652,circular economy + recycling,2
+0.022444646648468305,circular economy + innovation,2
+0.022444646648468305,circular economy + sustainable business models,2
+0.02032150439793752,remanufacturing,1
+0.02032150439793752,systematic literature review,1
+0.019411586290567183,business model + sustainability,2
+0.019411586290567183,circular economy + waste management,2
+0.019411586290567183,resource efficiency,1
+0.01910828025477707,digitalization,1
+0.018501668183196845,supply chain,1
+0.018198362147406732,artificial intelligence,1
+0.018198362147406732,bibliometric analysis,1
+0.017591750075826508,sustainable business model,1
+0.016985138004246284,circularity,1
+0.01637852593266606,business models + sustainability,2
+0.01637852593266606,industrial symbiosis,1
+0.015771913861085837,circular economy + remanufacturing,2
+0.015771913861085837,life cycle assessment,1
+0.014861995753715499,reuse,1
+0.014558689717925387,business model + circular economy + sustainability,3
+0.014558689717925387,circular economy + digitalization,2
+0.014558689717925387,circular economy + resource efficiency,2
+0.014558689717925387,sustainable development goals,1
+0.014255383682135275,circular economy + systematic literature review,2
+0.014255383682135275,digital transformation,1
+0.014255383682135275,industry 4.0 + sustainability,2
+0.014255383682135275,value creation,1
+0.013952077646345162,circular economy (ce),1
+0.013952077646345162,circular economy + supply chain,2
+0.013952077646345162,literature review,1
+0.01364877161055505,barriers,1
+0.013345465574764938,case study,1
+0.013345465574764938,circular economy + industrial symbiosis,2
+0.012738853503184714,artificial intelligence + circular economy,2
+0.012738853503184714,business models + circular economy + sustainability,3
+0.012738853503184714,circular economy + sustainable business model,2
+0.012738853503184714,digital technologies,1
+0.012738853503184714,industrial ecology,1
+0.012738853503184714,renewable energy,1

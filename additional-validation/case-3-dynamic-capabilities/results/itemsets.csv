@@ -1,0 +1,66 @@
+support,itemsets_str,length
+0.5784860557768924,digital transformation,1
+0.3402390438247012,dynamic capabilities,1
+0.2239043824701195,digital transformation + dynamic capabilities,2
+0.0653386454183267,dynamic capability,1
+0.05976095617529881,artificial intelligence,1
+0.05976095617529881,smes,1
+0.04541832669322709,innovation,1
+0.043824701195219126,digitalization,1
+0.04302788844621514,sustainability,1
+0.04223107569721116,industry 4.0,1
+0.04063745019920319,digital transformation + dynamic capability,2
+0.0398406374501992,digital transformation + smes,2
+0.03266932270916335,artificial intelligence + digital transformation,2
+0.031075697211155377,digital leadership,1
+0.028685258964143426,dynamic capability theory,1
+0.027888446215139442,business model innovation,1
+0.027888446215139442,digital transformation + sustainability,2
+0.027091633466135457,firm performance,1
+0.026294820717131476,competitive advantage,1
+0.026294820717131476,digital transformation + industry 4.0,2
+0.026294820717131476,organizational resilience,1
+0.02549800796812749,digital transformation + innovation,2
+0.02549800796812749,dynamic capabilities theory,1
+0.02549800796812749,green innovation,1
+0.023107569721115537,dynamic capabilities + smes,2
+0.023107569721115537,organizational agility,1
+0.02151394422310757,bibliometric analysis,1
+0.02151394422310757,digital innovation,1
+0.02151394422310757,supply chain resilience,1
+0.020717131474103586,dynamic capabilities + innovation,2
+0.0199203187250996,business model innovation + digital transformation,2
+0.019123505976095617,pls-sem,1
+0.018326693227091632,digital transformation + digitalization,2
+0.018326693227091632,digital transformation + dynamic capabilities + smes,3
+0.01752988047808765,digital transformation + dynamic capability theory,2
+0.01752988047808765,digital transformation + green innovation,2
+0.01752988047808765,digital transformation + organizational resilience,2
+0.01752988047808765,esg performance,1
+0.01752988047808765,resilience,1
+0.016733067729083666,digital transformation + organizational agility,2
+0.016733067729083666,systematic literature review,1
+0.01593625498007968,artificial intelligence + dynamic capabilities,2
+0.01593625498007968,competitive advantage + digital transformation,2
+0.01593625498007968,digital technologies,1
+0.01593625498007968,dynamic capabilities + industry 4.0,2
+0.015139442231075698,digital leadership + digital transformation,2
+0.015139442231075698,digitalization + dynamic capabilities,2
+0.015139442231075698,innovation performance,1
+0.015139442231075698,resource-based view,1
+0.014342629482071713,absorptive capacity,1
+0.014342629482071713,big data,1
+0.014342629482071713,case study,1
+0.014342629482071713,digital capabilities,1
+0.014342629482071713,digital technology,1
+0.014342629482071713,digital transformation + dynamic capabilities + innovation,3
+0.014342629482071713,digital transformation + firm performance,2
+0.014342629482071713,dynamic capabilities + sustainability,2
+0.014342629482071713,strategic agility,1
+0.014342629482071713,sustainable development,1
+0.013545816733067729,business model innovation + dynamic capabilities,2
+0.013545816733067729,digital innovation + digital transformation,2
+0.013545816733067729,digital maturity,1
+0.013545816733067729,emerging economies,1
+0.012749003984063745,innovation capability,1
+0.012749003984063745,public sector,1

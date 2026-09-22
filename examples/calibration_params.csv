@@ -1,0 +1,49 @@
+corpus,varied,value,selected_sigma,rules
+CSR example,min_pairs,5,0.0125,21
+CSR example,min_pairs,10,0.0125,21
+CSR example,min_pairs,15,0.0125,21
+CSR example,min_pairs,20,0.00625,78
+CSR example,min_pairs,30,0.00625,78
+CSR example,start,0.1,0.0125,21
+CSR example,start,0.05,0.0125,21
+CSR example,start,0.025,0.0125,21
+A,min_pairs,5,0.05,18
+A,min_pairs,10,0.05,18
+A,min_pairs,15,0.025,13097
+A,min_pairs,20,0.025,13097
+A,min_pairs,30,0.025,13097
+A,start,0.1,0.05,18
+A,start,0.05,0.05,18
+A,start,0.025,0.025,13097
+B,min_pairs,5,0.05,9
+B,min_pairs,10,0.025,36
+B,min_pairs,15,0.025,36
+B,min_pairs,20,0.025,36
+B,min_pairs,30,0.025,36
+B,start,0.1,0.025,36
+B,start,0.05,0.025,36
+B,start,0.025,0.025,36
+C,min_pairs,5,0.025,8
+C,min_pairs,10,0.0125,30
+C,min_pairs,15,0.0125,30
+C,min_pairs,20,0.0125,30
+C,min_pairs,30,0.00625,103
+C,start,0.1,0.0125,30
+C,start,0.05,0.0125,30
+C,start,0.025,0.0125,30
+D,min_pairs,5,0.05,5
+D,min_pairs,10,0.0125,23
+D,min_pairs,15,0.0125,23
+D,min_pairs,20,0.0125,23
+D,min_pairs,30,0.00625,66
+D,start,0.1,0.0125,23
+D,start,0.05,0.0125,23
+D,start,0.025,0.0125,23
+E,min_pairs,5,0.05,7
+E,min_pairs,10,0.025,14
+E,min_pairs,15,0.025,14
+E,min_pairs,20,0.0125,32
+E,min_pairs,30,0.0125,32
+E,start,0.1,0.025,14
+E,start,0.05,0.025,14
+E,start,0.025,0.025,14

@@ -1,0 +1,23 @@
+==== ASSOCIATION RULE REPORT ====
+Articles with author keywords     : 31
+Unique keywords                   : 127
+Avg keywords / article            : 5.74
+min_support (sigma)               : 0.05
+min_confidence (gamma)            : 0.3
+Frequent itemsets                 : 27
+  singletons / pairs / triples /4+: 13 / 12 / 2 / 0
+Association rules                 : 18
+Max lift                          : 4.43
+Max confidence                    : 1.000
+
+---- Top 10 rules by lift ----
+employee well-being -> employee engagement + quiet quitting  (supp=0.065, conf=1.000, lift=4.43)
+organizational behavior -> employee engagement + quiet quitting  (supp=0.065, conf=1.000, lift=4.43)
+employee well-being -> employee engagement  (supp=0.065, conf=1.000, lift=2.21)
+employee well-being + quiet quitting -> employee engagement  (supp=0.065, conf=1.000, lift=2.21)
+industry 5.0 -> employee engagement  (supp=0.065, conf=1.000, lift=2.21)
+leadership -> employee engagement  (supp=0.065, conf=1.000, lift=2.21)
+organizational behavior -> employee engagement  (supp=0.065, conf=1.000, lift=2.21)
+organizational behavior + quiet quitting -> employee engagement  (supp=0.065, conf=1.000, lift=2.21)
+remote work -> employee engagement  (supp=0.065, conf=1.000, lift=2.21)
+job satisfaction -> quiet quitting  (supp=0.161, conf=1.000, lift=1.29)

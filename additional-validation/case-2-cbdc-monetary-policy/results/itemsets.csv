@@ -1,0 +1,61 @@
+support,itemsets_str,length
+0.48214285714285715,monetary policy,1
+0.38839285714285715,central bank digital currency,1
+0.21875,cbdc,1
+0.20089285714285715,central bank digital currency + monetary policy,2
+0.12946428571428573,financial stability,1
+0.11160714285714286,cryptocurrency,1
+0.11160714285714286,digital currency,1
+0.10714285714285714,blockchain,1
+0.09821428571428571,central bank,1
+0.09821428571428571,central bank digital currencies,1
+0.08928571428571429,cbdc + monetary policy,2
+0.08928571428571429,financial stability + monetary policy,2
+0.07589285714285714,digital currency + monetary policy,2
+0.07589285714285714,financial inclusion,1
+0.07142857142857142,cryptocurrencies,1
+0.06696428571428571,cbdc + central bank digital currency,2
+0.06696428571428571,digital euro,1
+0.0625,central bank digital currency (cbdc),1
+0.0625,financial inclusion + monetary policy,2
+0.05803571428571429,central bank digital currencies + monetary policy,2
+0.05803571428571429,central banks,1
+0.05803571428571429,cryptocurrency + monetary policy,2
+0.05803571428571429,money,1
+0.049107142857142856,central bank digital currency + cryptocurrency,2
+0.049107142857142856,stablecoins,1
+0.044642857142857144,blockchain + central bank digital currency,2
+0.044642857142857144,central bank digital currencies (cbdcs),1
+0.044642857142857144,central bank digital currency + digital euro,2
+0.044642857142857144,fintech,1
+0.04017857142857143,blockchain + monetary policy,2
+0.04017857142857143,cbdcs,1
+0.04017857142857143,central bank + digital currency,2
+0.04017857142857143,central bank + monetary policy,2
+0.04017857142857143,central bank digital currency + financial stability,2
+0.04017857142857143,central banks + monetary policy,2
+0.03571428571428571,blockchain + cbdc,2
+0.03571428571428571,cash,1
+0.03571428571428571,cbdc + digital currency,2
+0.03571428571428571,central bank digital currencies + financial stability,2
+0.03125,central bank digital currencies (cbdcs) + monetary policy,2
+0.03125,digital currencies,1
+0.03125,digital euro + monetary policy,2
+0.03125,distributed ledger technology,1
+0.03125,monetary policy + stablecoins,2
+0.03125,payments,1
+0.026785714285714284,blockchain + cryptocurrency,2
+0.026785714285714284,cash + monetary policy,2
+0.026785714285714284,cbdc + central bank digital currency + monetary policy,3
+0.026785714285714284,cbdc + cryptocurrency,2
+0.026785714285714284,cbdc + financial inclusion,2
+0.026785714285714284,central bank + cryptocurrency,2
+0.026785714285714284,central bank digital currency + cryptocurrency + monetary policy,3
+0.026785714285714284,central bank digital currency + distributed ledger technology,2
+0.026785714285714284,central bank digital currency + financial inclusion,2
+0.026785714285714284,central bank digital currency + financial stability + monetary policy,3
+0.026785714285714284,cryptocurrencies + monetary policy,2
+0.026785714285714284,digital finance,1
+0.026785714285714284,european central bank,1
+0.026785714285714284,monetary policy + money,2
+0.026785714285714284,payment system,1

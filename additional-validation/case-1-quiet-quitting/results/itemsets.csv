@@ -1,0 +1,28 @@
+support,itemsets_str,length
+0.7741935483870968,quiet quitting,1
+0.45161290322580644,employee engagement,1
+0.22580645161290322,employee engagement + quiet quitting,2
+0.16129032258064516,job satisfaction,1
+0.16129032258064516,job satisfaction + quiet quitting,2
+0.0967741935483871,burnout,1
+0.0967741935483871,burnout + quiet quitting,2
+0.06451612903225806,emotional exhaustion,1
+0.06451612903225806,emotional exhaustion + quiet quitting,2
+0.06451612903225806,employee engagement + employee well-being,2
+0.06451612903225806,employee engagement + employee well-being + quiet quitting,3
+0.06451612903225806,employee engagement + industry 5.0,2
+0.06451612903225806,employee engagement + leadership,2
+0.06451612903225806,employee engagement + organizational behavior,2
+0.06451612903225806,employee engagement + organizational behavior + quiet quitting,3
+0.06451612903225806,employee engagement + remote work,2
+0.06451612903225806,employee well-being,1
+0.06451612903225806,employee well-being + quiet quitting,2
+0.06451612903225806,generation z,1
+0.06451612903225806,industry 5.0,1
+0.06451612903225806,leadership,1
+0.06451612903225806,motivation,1
+0.06451612903225806,motivation + quiet quitting,2
+0.06451612903225806,organizational behavior,1
+0.06451612903225806,organizational behavior + quiet quitting,2
+0.06451612903225806,organizational citizenship behaviour,1
+0.06451612903225806,remote work,1

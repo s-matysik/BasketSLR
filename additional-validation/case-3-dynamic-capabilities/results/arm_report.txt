@@ -1,0 +1,23 @@
+==== ASSOCIATION RULE REPORT ====
+Articles with author keywords     : 1255
+Unique keywords                   : 3109
+Avg keywords / article            : 5.65
+min_support (sigma)               : 0.0125
+min_confidence (gamma)            : 0.3
+Frequent itemsets                 : 65
+  singletons / pairs / triples /4+: 39 / 24 / 2 / 0
+Association rules                 : 30
+Max lift                          : 1.65
+Max confidence                    : 0.793
+
+---- Top 10 rules by lift ----
+digital transformation + innovation -> dynamic capabilities  (supp=0.014, conf=0.562, lift=1.65)
+business model innovation -> dynamic capabilities  (supp=0.014, conf=0.486, lift=1.43)
+innovation -> digital transformation + dynamic capabilities  (supp=0.014, conf=0.316, lift=1.41)
+dynamic capabilities + smes -> digital transformation  (supp=0.018, conf=0.793, lift=1.37)
+smes -> digital transformation + dynamic capabilities  (supp=0.018, conf=0.307, lift=1.37)
+digital transformation + smes -> dynamic capabilities  (supp=0.018, conf=0.460, lift=1.35)
+innovation -> dynamic capabilities  (supp=0.021, conf=0.456, lift=1.34)
+organizational agility -> digital transformation  (supp=0.017, conf=0.724, lift=1.25)
+business model innovation -> digital transformation  (supp=0.020, conf=0.714, lift=1.23)
+dynamic capabilities + innovation -> digital transformation  (supp=0.014, conf=0.692, lift=1.20)

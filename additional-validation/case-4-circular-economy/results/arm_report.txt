@@ -1,0 +1,23 @@
+==== ASSOCIATION RULE REPORT ====
+Articles with author keywords     : 3297
+Unique keywords                   : 6810
+Avg keywords / article            : 5.61
+min_support (sigma)               : 0.0125
+min_confidence (gamma)            : 0.3
+Frequent itemsets                 : 60
+  singletons / pairs / triples /4+: 35 / 23 / 2 / 0
+Association rules                 : 23
+Max lift                          : 1.89
+Max confidence                    : 0.851
+
+---- Top 10 rules by lift ----
+industry 4.0 -> sustainability  (supp=0.014, conf=0.367, lift=1.89)
+sustainable business models -> circular economy  (supp=0.022, conf=0.851, lift=1.16)
+industrial symbiosis -> circular economy  (supp=0.013, conf=0.815, lift=1.11)
+business model -> circular economy  (supp=0.064, conf=0.808, lift=1.10)
+business models -> circular economy  (supp=0.055, conf=0.808, lift=1.10)
+business model innovation -> circular economy  (supp=0.037, conf=0.807, lift=1.10)
+sustainable development -> circular economy  (supp=0.043, conf=0.789, lift=1.07)
+business models + sustainability -> circular economy  (supp=0.013, conf=0.778, lift=1.06)
+remanufacturing -> circular economy  (supp=0.016, conf=0.776, lift=1.06)
+innovation -> circular economy  (supp=0.022, conf=0.763, lift=1.04)

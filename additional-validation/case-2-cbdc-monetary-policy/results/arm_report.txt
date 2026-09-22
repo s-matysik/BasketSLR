@@ -1,0 +1,23 @@
+==== ASSOCIATION RULE REPORT ====
+Articles with author keywords     : 224
+Unique keywords                   : 641
+Avg keywords / article            : 6.04
+min_support (sigma)               : 0.025
+min_confidence (gamma)            : 0.3
+Frequent itemsets                 : 60
+  singletons / pairs / triples /4+: 26 / 31 / 3 / 0
+Association rules                 : 36
+Max lift                          : 3.67
+Max confidence                    : 0.857
+
+---- Top 10 rules by lift ----
+central bank -> digital currency  (supp=0.040, conf=0.409, lift=3.67)
+digital currency -> central bank  (supp=0.040, conf=0.360, lift=3.67)
+central bank digital currencies -> financial stability  (supp=0.036, conf=0.364, lift=2.81)
+distributed ledger technology -> central bank digital currency  (supp=0.027, conf=0.857, lift=2.21)
+digital euro -> central bank digital currency  (supp=0.045, conf=0.667, lift=1.72)
+financial inclusion -> monetary policy  (supp=0.062, conf=0.824, lift=1.71)
+financial inclusion -> cbdc  (supp=0.027, conf=0.353, lift=1.61)
+cash -> monetary policy  (supp=0.027, conf=0.750, lift=1.56)
+blockchain -> cbdc  (supp=0.036, conf=0.333, lift=1.52)
+digital currency -> cbdc  (supp=0.036, conf=0.320, lift=1.46)
