@@ -36,6 +36,7 @@ CORPORA = [
     ("C", REPO / "additional-validation" / "case-3-dynamic-capabilities" / "source_scopus_keywords.csv"),
     ("D", REPO / "additional-validation" / "case-4-circular-economy" / "source_scopus_keywords.csv"),
     ("E", REPO / "additional-validation" / "case-5-federated-learning" / "source_scopus_keywords.csv"),
+    ("F", REPO / "additional-validation" / "case-6-gamification-marketing" / "source_scopus_keywords.csv"),
 ]
 
 SIGMA_GRID = [0.005, 0.0075, 0.01, 0.0125, 0.015, 0.02, 0.025, 0.03, 0.04, 0.05]

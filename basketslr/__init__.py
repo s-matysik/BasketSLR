@@ -14,7 +14,7 @@ from .colab_app import run as colab_run
 try:
     __version__ = _m.version(__name__)
 except _m.PackageNotFoundError:
-    __version__ = "1.0.0"
+    __version__ = "1.0.1"
 
 __all__ = [
     "read_csv", "extract_transactions", "corpus_stats",

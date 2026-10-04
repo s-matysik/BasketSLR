@@ -8,6 +8,8 @@ for corpus-dependent minimum-support calibration (paper Sec. 3.5).
 """
 from __future__ import annotations
 
+import warnings
+
 import pandas as pd
 from mlxtend.frequent_patterns import apriori as _apriori
 from mlxtend.frequent_patterns import association_rules as _assoc_rules
@@ -18,6 +20,12 @@ from .utils import itemset_to_str
 DEFAULT_MIN_SUPPORT = 0.005     # sigma
 DEFAULT_MIN_CONFIDENCE = 0.3    # gamma
 DEFAULT_MAX_LEN = 4
+
+# Interpretive bounds suggested by the cross-domain validation reported in the
+# accompanying article. Below either bound a rule set is still produced, but
+# individual rules may rest on very few co-occurring publications.
+MIN_ABS_SUPPORT_HINT = 3    # sigma * n, in co-occurring publications
+MIN_CORPUS_HINT = 100       # keyword-bearing records
 
 
 def encode_transactions(transactions: list[list[str]]) -> pd.DataFrame:
@@ -102,6 +110,33 @@ def auto_min_support(
         freq = frequent_itemsets(transactions, min_support=sigma, max_len=2)
         n_pairs = int((freq["length"] == 2).sum()) if not freq.empty else 0
         if n_pairs >= min_pairs:
+            _warn_if_below_interpretive_bounds(sigma, len(transactions))
             return sigma
         sigma /= 2
+    _warn_if_below_interpretive_bounds(floor, len(transactions))
     return floor
+
+
+def _warn_if_below_interpretive_bounds(sigma: float, n: int) -> None:
+    """
+    Emit a ``UserWarning`` when the calibrated threshold or the corpus falls
+    below the interpretive bounds established by the cross-domain validation.
+
+    No floor is enforced: rare co-occurrences may indicate emerging themes, so
+    the caller retains control over the trade-off.
+    """
+    if sigma * n < MIN_ABS_SUPPORT_HINT:
+        warnings.warn(
+            f"sigma * n = {sigma * n:.2f} < {MIN_ABS_SUPPORT_HINT}. Some rules "
+            f"may rest on a single co-occurring publication and should be "
+            f"treated as exploratory.",
+            UserWarning,
+            stacklevel=3,
+        )
+    if n < MIN_CORPUS_HINT:
+        warnings.warn(
+            f"Only {n} keyword-bearing records. Rule sets from corpora below "
+            f"{MIN_CORPUS_HINT} records should be treated as exploratory.",
+            UserWarning,
+            stacklevel=3,
+        )

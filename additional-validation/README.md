@@ -1,11 +1,13 @@
-# Additional validation – five cross-domain cases
+# Additional validation – six cross-domain cases
 
-Cross-domain, cross-scale validation of BasketSLR 1.0.0 on five Scopus corpora
-(management, economics, computer science; N = 34 – 5,457). All Scopus exports
-were performed in July 2026. Each `case-*` folder contains:
+Cross-domain, cross-scale validation of BasketSLR on six Scopus corpora
+(management, economics, computer science; N = 34 – 14,302). Exports for cases 1–5
+were performed in July 2026; case 6 reuses the gamification-and-marketing corpus
+of the EmbedSLR study (export of 2025). Each `case-*` folder contains:
 
-* `source_scopus_keywords.csv` – reduced Scopus export (Authors, Title, Year,
-  Source title, DOI, Link, Author Keywords) sufficient for exact reproduction,
+* `source_scopus_keywords.csv` – reduced Scopus export sufficient for exact
+  reproduction; case 6 retains the `Author Keywords` column only, because the
+  full export is 232 MB,
 * `results/` – full BasketSLR output (frequency.csv, itemsets.csv, rules.csv,
   arm_report.txt, keyword_basket_analysis.xlsx, fig1–fig4, ZIP) produced with
   the auto-calibrated minimum support (iterative halving) and gamma = 0.3.
@@ -38,7 +40,7 @@ frequent keyword of the corpus (star topology indicator).
    practical utility of the iterative-halving heuristic.
 2. **Keyword dispersion drives star topology.** At a fixed sigma = 0.005 the star
    share generally increases with corpus size, although not strictly
-   monotonically: 5% -> 12% -> 60% -> 90% -> 79%. See the SoftwareX supplementary
+   monotonically: 5% -> 12% -> 60% -> 90% -> 79% -> 100%. See the SoftwareX supplementary
    material for a mechanistic decomposition of this effect.
 3. **Determinism.** Every run is exactly reproducible: identical inputs, parameters
    and software environment produce byte-identical rules.csv across repeated

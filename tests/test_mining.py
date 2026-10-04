@@ -7,6 +7,8 @@ confidence.
 """
 from __future__ import annotations
 
+import warnings
+
 from collections import Counter
 
 import pytest
@@ -206,3 +208,41 @@ def test_all_rules_clear_the_requested_thresholds(csr_mined):
     _, rules = csr_mined
     assert rules["support"].min() >= 0.005 - 1e-12
     assert rules["confidence"].min() >= 0.3 - 1e-12
+
+
+# --------------------------------------------------------------------------
+# interpretive-bound warnings
+#
+# The article states that the calibration heuristic warns, but does not
+# enforce a floor, when the effective absolute threshold or the corpus size
+# falls below the bounds suggested by the cross-domain validation.
+# --------------------------------------------------------------------------
+
+def test_calibration_warns_when_effective_threshold_is_below_three():
+    """sigma * n < 3 means a rule can rest on one or two publications."""
+    tiny = [["alpha", "beta"], ["alpha", "gamma"], ["beta", "gamma"]] * 4
+    with pytest.warns(UserWarning, match=r"sigma \* n"):
+        b.auto_min_support(tiny)
+
+
+def test_calibration_warns_on_a_corpus_below_one_hundred_records():
+    small = [["alpha", "beta"], ["alpha", "beta"]] * 10
+    with pytest.warns(UserWarning, match="keyword-bearing records"):
+        b.auto_min_support(small)
+
+
+def test_calibration_is_silent_on_a_corpus_that_clears_both_bounds(
+        csr_transactions):
+    with warnings.catch_warnings():
+        warnings.simplefilter("error", UserWarning)
+        b.auto_min_support(csr_transactions)
+
+
+def test_calibration_returns_a_threshold_despite_warning():
+    """The warning is advisory: no floor is enforced and mining proceeds."""
+    tiny = [["alpha", "beta"], ["alpha", "gamma"], ["beta", "gamma"]] * 4
+    with pytest.warns(UserWarning):
+        sigma = b.auto_min_support(tiny)
+    assert 0 < sigma <= 0.05
+    _, rules = b.mine(tiny, sigma, 0.3, 4)
+    assert len(rules) > 0

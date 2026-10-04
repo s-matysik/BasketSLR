@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "basketslr"
-version = "1.0.0"
+version = "1.0.1"
 description = "Association rule mining of author keywords for thematic mapping in systematic literature reviews"
 authors = [{name="BasketSLR Dev Team", email="sebastian.matysik@usz.edu.pl"}]
 license = {text="MIT"}
@@ -46,4 +46,9 @@ markers = [
 ]
 filterwarnings = [
   "ignore::RuntimeWarning:mlxtend.frequent_patterns.association_rules",
+  # The interpretive-bound warnings are intentional on the deliberately tiny
+  # fixtures used throughout the suite; the tests that assert them use
+  # pytest.warns and are unaffected by this filter.
+  "ignore:sigma \\* n = .*:UserWarning",
+  "ignore:Only [0-9]+ keyword-bearing records.*:UserWarning",
 ]

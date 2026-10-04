@@ -1,0 +1,23 @@
+==== ASSOCIATION RULE REPORT ====
+Articles with author keywords     : 12209
+Unique keywords                   : 27242
+Avg keywords / article            : 5.46
+min_support (sigma)               : 0.003125
+min_confidence (gamma)            : 0.3
+Frequent itemsets                 : 171
+  singletons / pairs / triples /4+: 151 / 20 / 0 / 0
+Association rules                 : 14
+Max lift                          : 4.01
+Max confidence                    : 0.840
+
+---- Top 10 rules by lift ----
+game elements -> gamification  (supp=0.005, conf=0.840, lift=4.01)
+motivation -> gamification  (supp=0.017, conf=0.527, lift=2.52)
+engagement -> gamification  (supp=0.012, conf=0.500, lift=2.39)
+intrinsic motivation -> gamification  (supp=0.004, conf=0.480, lift=2.29)
+learning -> gamification  (supp=0.005, conf=0.459, lift=2.19)
+self-determination theory -> gamification  (supp=0.006, conf=0.453, lift=2.16)
+serious games -> gamification  (supp=0.008, conf=0.452, lift=2.16)
+education -> gamification  (supp=0.010, conf=0.443, lift=2.12)
+games -> gamification  (supp=0.004, conf=0.421, lift=2.01)
+user engagement -> gamification  (supp=0.003, conf=0.396, lift=1.89)

@@ -64,8 +64,8 @@ b.run_analysis(df, out="results/")                 # full pipeline + ZIP
 
 ## 🔬 Validation corpora and paper tables
 
-Five additional Scopus corpora spanning management, economics and computer
-science (34–5,457 records) are distributed in `additional-validation/`, each
+Six additional Scopus corpora spanning management, economics and computer
+science (34–14,302 records) are distributed in `additional-validation/`, each
 with its source keywords and the complete analytical outputs; `summary.csv`
 aggregates them. These are the corpora behind Table 4 of the SoftwareX article.
 
@@ -78,7 +78,7 @@ python examples/reproduce_paper_tables.py
 
 | File | Content |
 |---|---|
-| `examples/sigma_sweep.csv` | six corpora x ten values of the minimum-support threshold (supplementary Fig. S1, Table S6) |
+| `examples/sigma_sweep.csv` | seven corpora x ten values of the minimum-support threshold (supplementary Fig. S1, Table S6) |
 | `examples/calibration_params.csv` | sensitivity of `auto_min_support()` to its own constants (article Table 5) |
 
 ## ✅ Tests
