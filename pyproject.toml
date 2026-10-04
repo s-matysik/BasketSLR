@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "basketslr"
-version = "1.0.1"
+version = "1.0.0"
 description = "Association rule mining of author keywords for thematic mapping in systematic literature reviews"
 authors = [{name="BasketSLR Dev Team", email="sebastian.matysik@usz.edu.pl"}]
 license = {text="MIT"}
