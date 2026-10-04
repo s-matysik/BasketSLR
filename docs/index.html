@@ -78,6 +78,33 @@ run()
 
 <p>Rules of thumb for σ: small corpora (N &lt; 100): 0.05–0.10; medium (100–1,000): 0.005–0.02; large (&gt; 1,000): 0.001–0.005.</p>
 
+<h3>4.1 Interpretive-bound warnings</h3>
+
+<p><code>auto_min_support()</code> emits a <code>UserWarning</code> when the calibrated threshold leaves a rule
+resting on very few publications, or when the corpus itself is small:</p>
+
+<table>
+<tr><th>Condition</th><th>Constant</th><th>Meaning</th></tr>
+<tr><td>σ·n &lt; 3</td><td><code>MIN_ABS_SUPPORT_HINT</code></td><td>a surviving rule can rest on one or two
+co-occurring publications; high lift then signals rarity, not an established link</td></tr>
+<tr><td>n &lt; 100</td><td><code>MIN_CORPUS_HINT</code></td><td>rule sets from corpora this small should be read
+as exploratory</td></tr>
+</table>
+
+<p>Both bounds come from the cross-domain validation. <strong>No floor is enforced</strong> – rare
+co-occurrences may indicate emerging themes, so the caller keeps control of the trade-off. Suppress the
+warnings with the standard library if they are expected:</p>
+
+<pre><code>import warnings
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore", UserWarning)
+    sigma = b.auto_min_support(transactions)
+</code></pre>
+
+<p><small class="note">σ·n is the effective absolute threshold: the minimum number of co-occurring
+publications a pattern must reach. Because a fixed σ implies a different σ·n at every corpus size, the same
+σ behaves differently across corpora – which is what the calibration heuristic exists to absorb.</small></p>
+
 <h2>5&nbsp;&nbsp;Python API example</h2>
 
 <pre><code>import basketslr as b
@@ -104,15 +131,70 @@ b.full_report(tr, freq, rules, sigma, 0.3, path="arm_report.txt")
 <tr><td>report.py</td><td>arm_report.txt, Excel export</td><td>deterministic</td></tr>
 <tr><td>pipeline.py</td><td>end-to-end workflow + ZIP</td><td>shared by all UIs</td></tr>
 <tr><td>cli.py / wizard.py / colab_app.py</td><td>entry points</td><td>mirror the pipeline</td></tr>
+<tr><td>utils.py</td><td>shared helpers (output paths, ZIP packaging)</td><td>no randomness</td></tr>
+<tr><td>__init__.py / _version.py</td><td>public API surface and version constant</td><td>–</td></tr>
 </table>
+
+<p><small class="note">Everything re-exported from <code>basketslr</code> is listed in <code>__all__</code>; importing submodules directly is not required.</small></p>
 
 <h2>7&nbsp;&nbsp;Reproducible example</h2>
 
 <p>The repository ships the CSR corpus (<code>examples/</code>, 597 Scopus records). With σ = 0.005 and γ = 0.3 BasketSLR yields <strong>278 frequent itemsets</strong> (151 singletons, 115 pairs, 11 triples, 1 quadruple) and <strong>138 association rules</strong>, e.g. {brand equity, brand loyalty} → {brand awareness} with lift = 52.03 – identical on every run.</p>
 
+<h3>7.1 Cross-domain validation corpora</h3>
+
+<p><code>additional-validation/</code> holds six further Scopus corpora spanning management, economics and
+computer science, each with its source keywords, the complete analytical output of a calibrated run, and a row
+in <code>summary.csv</code>. They cover a 420-fold range of corpus size.</p>
+
+<table>
+<tr><th>Case</th><th>Records</th><th>With keywords</th><th>Auto σ</th><th>Rules</th><th>Star share</th></tr>
+<tr><td><code>1-quiet-quitting</code></td><td>34</td><td>31</td><td>0.05</td><td>18</td><td>50%</td></tr>
+<tr><td><code>2-cbdc-monetary-policy</code></td><td>277</td><td>224</td><td>0.025</td><td>36</td><td>53%</td></tr>
+<tr><td><code>3-dynamic-capabilities</code></td><td>1,333</td><td>1,255</td><td>0.0125</td><td>30</td><td>63%</td></tr>
+<tr><td><code>4-circular-economy</code></td><td>3,765</td><td>3,297</td><td>0.0125</td><td>23</td><td>96%</td></tr>
+<tr><td><code>5-federated-learning</code></td><td>5,457</td><td>4,678</td><td>0.025</td><td>14</td><td>93%</td></tr>
+<tr><td><code>6-gamification-marketing</code></td><td>14,302</td><td>12,209</td><td>0.003125</td><td>14</td><td>100%</td></tr>
+</table>
+
+<p><small class="note">Case 6 distributes the <code>Author Keywords</code> column only; the full Scopus export
+is 232&nbsp;MB. Star share is the fraction of rules whose consequent is the single most frequent keyword – it
+rises with σ·n, which is why the largest corpora concentrate on one anchor term.</small></p>
+
+<h3>7.2 Regenerating the published parameter tables</h3>
+
+<p>Both parameter sweeps reported in the article and its supplementary material regenerate from a clean
+checkout, with no network access:</p>
+
+<pre><code>python examples/reproduce_paper_tables.py</code></pre>
+
+<table>
+<tr><th>File written</th><th>Content</th></tr>
+<tr><td><code>examples/sigma_sweep.csv</code></td><td>seven corpora × ten values of σ: itemsets, rules and star
+share</td></tr>
+<tr><td><code>examples/calibration_params.csv</code></td><td>sensitivity of the calibration heuristic to its own
+two constants</td></tr>
+</table>
+
+<h3>7.3 Tests</h3>
+
+<p>The suite covers ingestion and degenerate inputs, mining and the metric identities the method relies on,
+regression against every value reported in the article, and the end-to-end pipeline including byte-identical
+reproduction of the shipped outputs:</p>
+
+<pre><code>pip install -e ".[test]"
+pytest
+</code></pre>
+
+<p>Continuous integration runs it on every push and pull request across Python 3.9–3.13 on Linux, plus
+Python 3.12 on macOS and Windows.</p>
+
 <h2>8&nbsp;&nbsp;Related software</h2>
 
 <p><a href="https://github.com/s-matysik/EmbedSLR">EmbedSLR</a> – deterministic embedding-based screening for SLR. ARM-derived themes can inform the natural-language queries used by EmbedSLR (iterative ARM → screening → ARM refinement cycle).</p>
+
+<hr>
+<p><small class="note">BasketSLR v1.0.0 · MIT License · <a href="https://github.com/s-matysik/BasketSLR">source</a> · documentation generated from the repository, last updated with the v1.0.0 release.</small></p>
 
 </body>
 </html>
