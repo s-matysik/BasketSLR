@@ -42,13 +42,20 @@ import basketslr as b
 
 df = b.read_csv("scopus.csv")
 transactions = b.extract_transactions(df)          # publications -> keyword baskets
-freq, rules = b.mine(transactions,
-                     min_support=0.005,            # sigma
-                     min_confidence=0.3)           # gamma
+
+# Auto-calibration: recommended for interpretation
+sigma = b.auto_min_support(transactions)           # iterative halving
+itemsets, rules = b.mine(transactions,
+                         min_support=sigma,
+                         min_confidence=0.3)       # gamma
 print(rules[["antecedents_str", "consequents_str",
              "support", "confidence", "lift"]].head())
 
-b.run_analysis(df, out="results/")                 # full pipeline + ZIP
+# Full pipeline + ZIP, auto-calibrated
+b.run_analysis(df, out="results/", min_support="auto")
+
+# Fixed threshold: keeps rule counts comparable across corpora
+b.run_analysis(df, out="results/", min_support=0.005)
 ```
 
 ## 📦 Outputs

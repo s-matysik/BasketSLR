@@ -113,11 +113,20 @@ df  = b.read_csv("scopus.csv")
 tr  = b.extract_transactions(df)          # publications -&gt; keyword baskets
 print(b.corpus_stats(tr))
 
-sigma = b.auto_min_support(tr)            # optional calibration
-freq, rules = b.mine(tr, min_support=sigma, min_confidence=0.3)
+sigma = b.auto_min_support(tr)            # recommended for interpretation
+itemsets, rules = b.mine(tr, min_support=sigma, min_confidence=0.3)
 
 b.plot_rules_network(rules, top_n=40, path="network.png")
-b.full_report(tr, freq, rules, sigma, 0.3, path="arm_report.txt")
+b.full_report(tr, itemsets, rules, sigma, 0.3, path="arm_report.txt")</code></pre>
+
+<p>The same two paths through the full pipeline, which also writes the figures, the Excel workbook and the
+ZIP package:</p>
+
+<pre><code># Auto-calibration: recommended for interpretation
+b.run_analysis(df, out="results/", min_support="auto")
+
+# Fixed threshold: keeps rule counts comparable across corpora
+b.run_analysis(df, out="results/", min_support=0.005)
 </code></pre>
 
 <h2>6&nbsp;&nbsp;Modules</h2>
