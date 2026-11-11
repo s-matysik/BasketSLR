@@ -122,6 +122,25 @@ If you use **BasketSLR** in scientific work, please cite the accompanying method
 }
 ```
 
+## 🧪 Reproducing the published tables
+
+Two scripts regenerate every parameter table reported in the article and the
+supplementary material, from the corpora in this repository and with no network
+access:
+
+```bash
+python examples/reproduce_paper_tables.py     # sigma, calibration, confidence,
+                                              # itemset-size sweeps + memory
+python examples/compare_arm_libraries.py      # ARM-library comparison,
+                                              # manual-pipeline comparison,
+                                              # screening demonstration
+python examples/compare_arm_libraries.py --no-niaarm   # skip the slow table
+```
+
+The second script needs two packages that BasketSLR does not depend on:
+`pip install "niaarm==0.4.7" "niapy==2.7.1"`. Exact dependency versions for the
+published results are pinned in `requirements-lock.txt` and `environment.yml`.
+
 ## ⚖️ Licensing and data provenance
 
 The **source code** in this repository is released under the MIT License (see `LICENSE`).

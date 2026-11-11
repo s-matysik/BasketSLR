@@ -1,0 +1,2 @@
+records_parsed,records_with_duplicate_keyword,terms_counted_differently,itemsets_manual,itemsets_basketslr,rules_manual,rules_basketslr,first_rule_lift_manual,first_rule_lift_basketslr,auto_sigma
+555,1,social responsibility,278,278,138,138,0.89,52.03,0.0125

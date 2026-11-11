@@ -11,6 +11,10 @@ Two sweeps are produced:
 * ``calibration_params.csv`` - sensitivity of ``auto_min_support()`` to its own
   two constants: the starting threshold and the number of keyword pairs that
   must clear it before the search stops (article, Table 5).
+* ``remaining_params.csv``   - sensitivity to the minimum-confidence threshold
+  and to the maximum itemset size (supplementary Tables S6b and S6c).
+* ``memory_runtime.csv``     - peak traced allocation and mining time per corpus
+  (peak-memory column of supplementary Table S7).
 
 Run from the repository root::
 
@@ -40,6 +44,8 @@ CORPORA = [
 ]
 
 SIGMA_GRID = [0.005, 0.0075, 0.01, 0.0125, 0.015, 0.02, 0.025, 0.03, 0.04, 0.05]
+GAMMA_GRID = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
+MAX_LEN_GRID = [2, 3, 4, 5, 6, 0]
 MIN_PAIRS_GRID = [5, 10, 15, 20, 30]
 START_GRID = [0.1, 0.05, 0.025]
 
@@ -102,6 +108,58 @@ def calibration_params(corpora) -> list[dict]:
     return rows
 
 
+def remaining_params(corpora) -> list[dict]:
+    """Sweep minimum confidence and maximum itemset size at the calibrated sigma.
+
+    Reproduces supplementary Tables S6b and S6c.
+    """
+    rows = []
+    for name, path in corpora:
+        transactions, _ = _load(path)
+        sigma = b.auto_min_support(transactions)
+        for gamma in GAMMA_GRID:
+            _, rules = b.mine(transactions, sigma, gamma, MAX_LEN)
+            rows.append({"corpus": name, "varied": "min_confidence", "value": gamma,
+                         "sigma": sigma, "rules": len(rules)})
+        for max_len in MAX_LEN_GRID:
+            _, rules = b.mine(transactions, sigma, MIN_CONFIDENCE,
+                              max_len if max_len else None)
+            rows.append({"corpus": name, "varied": "max_len",
+                         "value": max_len if max_len else "unlimited",
+                         "sigma": sigma, "rules": len(rules)})
+    return rows
+
+
+def memory_and_runtime(corpora) -> list[dict]:
+    """Peak traced allocation and wall-clock time around the mining call.
+
+    Reproduces the peak-memory column of supplementary Table S7. The figure is
+    the peak of the allocations tracked by ``tracemalloc`` across transaction
+    encoding, itemset extraction and rule generation; it is not the peak
+    resident set size of the process.
+    """
+    import time
+    import tracemalloc
+
+    rows = []
+    for name, path in corpora:
+        transactions, _ = _load(path)
+        sigma = b.auto_min_support(transactions)
+        tracemalloc.start()
+        start = time.perf_counter()
+        _, rules = b.mine(transactions, sigma, MIN_CONFIDENCE, MAX_LEN)
+        elapsed = time.perf_counter() - start
+        _, peak = tracemalloc.get_traced_memory()
+        tracemalloc.stop()
+        rows.append({"corpus": name,
+                     "n_keyword_bearing": len(transactions),
+                     "sigma": sigma,
+                     "rules": len(rules),
+                     "mining_ms": round(elapsed * 1000, 1),
+                     "peak_traced_MB": round(peak / 1e6, 1)})
+    return rows
+
+
 def _write(path: Path, rows: list[dict]) -> None:
     with path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
@@ -117,6 +175,8 @@ def main() -> None:
     out = Path(__file__).resolve().parent
     _write(out / "sigma_sweep.csv", sigma_sweep(CORPORA))
     _write(out / "calibration_params.csv", calibration_params(CORPORA))
+    _write(out / "remaining_params.csv", remaining_params(CORPORA))
+    _write(out / "memory_runtime.csv", memory_and_runtime(CORPORA))
 
 
 if __name__ == "__main__":

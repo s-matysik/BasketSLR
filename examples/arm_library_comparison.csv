@@ -1,0 +1,5 @@
+library,encoding,vocabulary,budget_evaluations,rules_seed1,rules_seed1_repeat,rules_seed2,identical_at_fixed_seed,shared_across_seeds,union_across_seeds,seconds_per_run
+BasketSLR (Apriori via mlxtend),transactional baskets,1741,exhaustive,21,21,21,1,21,21,0.0041
+niaarm 0.4.7 (differential evolution),integer one-hot,60,20000,4213,4213,9820,1,0,14007,26.5
+niaarm 0.4.7 (differential evolution),categorical presence/absence,60,20000,0,0,0,1,0,0,19.2
+niaarm 0.4.7 (differential evolution),categorical presence/absence,60,200000,0,0,0,1,0,0,191.4
