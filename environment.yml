@@ -1,0 +1,18 @@
+# Conda environment reproducing the published results.
+#   conda env create -f environment.yml
+#   conda activate basketslr
+#   pip install -e .
+name: basketslr
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas=3.0.5
+  - numpy=2.4.6
+  - matplotlib=3.11.1
+  - networkx=3.6.1
+  - openpyxl=3.1.5
+  - pytest=8.4.2
+  - pip
+  - pip:
+      - mlxtend==0.25.0

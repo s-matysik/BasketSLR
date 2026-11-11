@@ -1,0 +1,18 @@
+# Exact versions of the environment in which the results reported in the
+# SoftwareX article and its supplementary material were produced
+# (environment B of supplementary Table S1; Python 3.11.15).
+#
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements-lock.txt
+#   pip install -e .
+#
+# The package itself declares compatibility ranges in pyproject.toml; this
+# file exists so that a reviewer can reproduce the published numbers under
+# the exact dependency versions that produced them.
+pandas==3.0.5
+numpy==2.4.6
+mlxtend==0.25.0
+matplotlib==3.11.1
+networkx==3.6.1
+openpyxl==3.1.5
+pytest==8.4.2

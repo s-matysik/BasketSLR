@@ -122,6 +122,30 @@ If you use **BasketSLR** in scientific work, please cite the accompanying method
 }
 ```
 
+## ⚖️ Licensing and data provenance
+
+The **source code** in this repository is released under the MIT License (see `LICENSE`).
+
+The **derived keyword data** in `additional-validation/*/source_scopus_keywords.csv` and
+`examples/data_Scopus_CSR_influence_consumer_behavior.csv` are reduced exports retaining only the
+`Author Keywords` column of Scopus records, redistributed for the sole purpose of reproducing the
+results reported in the accompanying article. Scopus is a proprietary database owned by Elsevier
+B.V.; bibliographic records are subject to the Elsevier Terms and Conditions and to the subscriber
+agreement of the institution from which they were exported. Author keywords are factual metadata
+supplied by the authors of the indexed publications and are reproduced here in the minimum extent
+required for verification. Users who wish to reuse these files beyond reproduction, or who need the
+full records, should obtain them from Scopus under their own institutional licence. The Scopus query
+and export date for every corpus are given in `additional-validation/README.md`.
+
+## 🤖 Use of AI assistance in development
+
+The author used **Claude Science** (Anthropic) as a coding assistant during the development of this
+package: for drafting and refactoring module code, writing the test suite, and preparing the
+documentation. All design decisions, the calibration heuristic, the validation protocol and the
+interpretation of every reported result are the author's own. All code was reviewed, executed and
+verified by the author, and the full test suite is run in continuous integration on every commit.
+The author takes full responsibility for the content of this repository.
+
 ## 📄 License
 
 MIT © 2026
